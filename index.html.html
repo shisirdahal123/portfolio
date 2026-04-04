@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Portfolio</title>
+
+<style>
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0B3D2E;
+  color: #f5f5f5;
+}
+
+h1, h2, h3 {
+  color: #D4AF37;
+}
+
+section {
+  padding: 60px 10%;
+}
+
+/* ===== Navbar ===== */
+nav {
+  position: sticky;
+  top: 0;
+  background: #06281d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #D4AF37;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ===== Hero ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid #D4AF37;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #D4AF37;
+  color: #0B3D2E;
+  text-decoration: none;
+  margin-top: 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: transparent;
+  border: 1px solid #D4AF37;
+  color: #D4AF37;
+}
+
+/* ===== Cards ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #06281d;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #D4AF37;
+}
+
+/* ===== Skills ===== */
+.skill {
+  margin: 10px 0;
+}
+
+.progress {
+  background: #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 10px;
+  background: #D4AF37;
+}
+
+/* ===== Contact ===== */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  background: #D4AF37;
+  color: #0B3D2E;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #06281d;
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== Navbar ===== -->
+<nav>
+  <h2>MyPortfolio</h2>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero">
+  <div>
+    <h1>Hi, I'm a PCPS Student</h1>
+    <p>Passionate about technology and innovation</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
+  <img src="https://via.placeholder.com/200" alt="profile">
+</section>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a student who has completed +2 and currently studying Bachelor's in PCPS. I am interested in science, programming, and continuous learning.</p>
+</section>
+
+<!-- ===== Education ===== -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>+2 Completed</h3>
+      <p>College Name</p>
+    </div>
+    <div class="card">
+      <h3>Bachelor in PCPS</h3>
+      <p>Ongoing</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill">HTML
+    <div class="progress"><div style="width:90%"></div></div>
+  </div>
+  <div class="skill">CSS
+    <div class="progress"><div style="width:85%"></div></div>
+  </div>
+  <div class="skill">Java
+    <div class="progress"><div style="width:70%"></div></div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Student Management System</h3>
+      <p>A system to manage student data efficiently.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+    <div class="card">
+      <h3>Event Management System</h3>
+      <p>A platform to organize and manage events.</p>
+      <a href="#" class="btn">View Project</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <p>© 2026 My Portfolio | GitHub | LinkedIn</p>
+</footer>
+
+</body>
+</html>
